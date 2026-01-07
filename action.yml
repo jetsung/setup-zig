@@ -1,4 +1,4 @@
-name: "Install Zig"
+name: "Setup Zig"
 description: "Install Zig compiler with version input support."
 author: "Jetsung Chan"
 branding:
@@ -6,13 +6,13 @@ branding:
   color: "blue"
 inputs:
   version:
-    description: "Zig version (e.g. 0.14.1, dev, master). Leave empty for latest stable."
+    description: "Zig version (e.g. 0.15.2, dev, master). Leave empty for latest stable."
     required: false
     default: ""
 runs:
   using: "composite"
   steps:
-    - name: "Install Zig"
+    - name: "Setup Zig"
       shell: bash
       run: ${{ github.action_path }}/install.sh
       env:

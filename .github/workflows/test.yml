@@ -8,7 +8,7 @@ jobs:
       matrix:
         include:
           - type: latest
-            version: 0.14.0
+            version: 0.15.1
           - type: master
             version: master
           - type: empty
@@ -16,10 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install Zig ${{ matrix.version }}
-        uses: ./ 
+        uses: ./
+        env:
+          DEBUG: 1
         with:
           version: ${{ matrix.version }}
       - name: Check Zig version

@@ -1,4 +1,4 @@
-# Install Zig Action
+# Setup Zig Action
 
 Installs Zig compiler in GitHub Actions runner.
 
@@ -9,15 +9,21 @@ Installs Zig compiler in GitHub Actions runner.
 ## Example usage
 
 ```yaml
-uses: jetsung/install-zig@v1
+uses: jetsung/setup-zig@v1
 with:
-  version: "0.14.1"
+  version: "0.15.2"
 ```
 
 ## Install Zig in Desktop or Server
 ```bash
-curl -L https://raw.githubusercontent.com/jetsung/install-zig/main/install.sh | bash
+curl -L https://raw.githubusercontent.com/jetsung/setup-zig/main/install.sh | bash
 
 # or with version
-curl -L https://raw.githubusercontent.com/jetsung/install-zig/main/install.sh | bash -s -- 0.14.1
+curl -L https://raw.githubusercontent.com/jetsung/setup-zig/main/install.sh | bash -s -- 0.15.2
 ```
+
+## Links
+
+- [Official Website](https://ziglang.org/)
+- [Downloads](https://ziglang.org/download/)
+- [Documentation](https://ziglang.org/learn/overview/)
